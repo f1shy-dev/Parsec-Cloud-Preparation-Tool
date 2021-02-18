@@ -20,20 +20,12 @@
                            
                                        
                     ~Parsec Self Hosted Cloud Setup Script~
-
-### We're hiring:
-We're hiring an experienced solutions architect on the US East Coast: [See here](https://careers.parsec.app/o/sales-engineer-solutions-architect)
-
-### Parsec Cloud Preparation Tool
+                    
+### Parsec Cloud Preparation Tool (Forked For FishCloud/Azure)
 This script sets up your cloud computer with a bunch of settings and drivers
 to make your life easier.  
                     
 It's provided with no warranty, so use it at your own risk.
-
-### Who this script is for:
-Home users who want to experiment with creating their own cloud server to play games.  
-
-If you are an IT person or business owner who is looking to roll out Parsec enabled cloud desktops for your business, you must license a [Parsec Teams subscription](https://parsec.app/teams/).
 
 ### Instructions:                    
 1. Set up your GPU accelerated cloud machine on Microsoft Azure, Amazon AWS, Google Cloud or Paperspace.  
@@ -47,7 +39,7 @@ Do not select "Turn on Display Device" when setting up the instance, this will c
 ### Copy this code into Powershell (you may need to press enter at the end):
 ```
 [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls" 
-$ScriptWebArchive = "https://github.com/parsec-cloud/Parsec-Cloud-Preparation-Tool/archive/master.zip"  
+$ScriptWebArchive = "https://github.com/vishy-dev/Parsec-Cloud-Preparation-Tool/archive/master.zip"  
 $LocalArchivePath = "$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool"  
 (New-Object System.Net.WebClient).DownloadFile($ScriptWebArchive, "$LocalArchivePath.zip")  
 Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force  
